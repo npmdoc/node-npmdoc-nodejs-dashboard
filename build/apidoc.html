@@ -1,0 +1,585 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/FormidableLabs/nodejs-dashboard#readme"
+
+    >nodejs-dashboard (v0.4.1)</a>
+</h1>
+<h4>Telemetry dashboard for node.js apps from the terminal!</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodejs-dashboard">module nodejs-dashboard</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard._delayed">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.</span>_delayed
+            <span class="apidocSignatureSpan">(delay)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard._emitStats">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.</span>_emitStats
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard._getStats">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.</span>_getStats
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard.dashboard">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.</span>dashboard
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard.destroy">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodejs-dashboard.</span>dashboard.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nodejs-dashboard.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodejs-dashboard.dashboard">module nodejs-dashboard.dashboard</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard.dashboard.dashboard">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.</span>dashboard
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodejs-dashboard.dashboard.prototype">module nodejs-dashboard.dashboard.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard.dashboard.prototype._configureKeys">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.dashboard.prototype.</span>_configureKeys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard.dashboard.prototype._createViews">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.dashboard.prototype.</span>_createViews
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard.dashboard.prototype._showLayout">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.dashboard.prototype.</span>_showLayout
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard.dashboard.prototype.onEvent">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.dashboard.prototype.</span>onEvent
+            <span class="apidocSignatureSpan">(event)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nodejs-dashboard.utils">module nodejs-dashboard.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nodejs-dashboard.utils.getPercentUsed">
+            function <span class="apidocSignatureSpan">nodejs-dashboard.utils.</span>getPercentUsed
+            <span class="apidocSignatureSpan">(used, total)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodejs-dashboard" id="apidoc.module.nodejs-dashboard">module nodejs-dashboard</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard._delayed" id="apidoc.element.nodejs-dashboard._delayed">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.</span>_delayed
+        <span class="apidocSignatureSpan">(delay)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_delayed = function (delay) {
+  metrics.eventLoop.high = Math.max(metrics.eventLoop.high, delay);
+  metrics.eventLoop.delay = delay;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard._emitStats" id="apidoc.element.nodejs-dashboard._emitStats">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.</span>_emitStats
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_emitStats = function () {
+
+  _getStats(function (err, newMetrics) {
+    if (err) {
+      console.error(&#x22;Failed to load metrics: &#x22;, err); //eslint-disable-line
+      if (socket &#x26;&#x26; socket.connected) {
+        socket.emit(&#x22;error&#x22;, JSON.stringify(err));
+      }
+    } else if (socket &#x26;&#x26; socket.connected) {
+      socket.emit(&#x22;metrics&#x22;, JSON.stringify(newMetrics));
+    }
+
+    resetEventMetrics();
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard._getStats" id="apidoc.element.nodejs-dashboard._getStats">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.</span>_getStats
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getStats = function (cb) {
+  _.merge(metrics.mem, process.memoryUsage());
+
+  pusage.stat(process.pid, function (err, stat) {
+
+    if (err) {
+      return cb(err);
+    }
+
+    metrics.cpu.utilization = stat.cpu;
+    return cb(null, metrics);
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard.dashboard" id="apidoc.element.nodejs-dashboard.dashboard">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.</span>dashboard
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Dashboard(options) {
+  this.options = options || {};
+  this.views = {};
+  this.settings = options.settings;
+
+  this.screen = blessed.screen({
+    smartCSR: true,
+    title: options.appName
+  });
+
+  this.logProvider = new LogProvider(this.screen);
+  this.metricsProvider = new MetricsProvider(this.screen);
+
+  this._createViews();
+  this._configureKeys();
+  this.screen.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard.destroy" id="apidoc.element.nodejs-dashboard.destroy">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+  if (socket) {
+    socket.close();
+    socket = null;
+  }
+  if (options.intervalId) {
+    clearInterval(options.intervalId);
+    options.intervalId = null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+Dashboard.prototype._showLayout = function (id) {
+if (this.currentLayout === id) {
+  return;
+}
+_.each(this.views, function (view) {
+  view.<span class="apidocCodeKeywordSpan">destroy</span>();
+});
+
+this.views = [];
+
+_.each(this.layouts[id], function (layoutConfig) {
+  var View;
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodejs-dashboard.dashboard" id="apidoc.module.nodejs-dashboard.dashboard">module nodejs-dashboard.dashboard</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard.dashboard.dashboard" id="apidoc.element.nodejs-dashboard.dashboard.dashboard">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.</span>dashboard
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Dashboard(options) {
+  this.options = options || {};
+  this.views = {};
+  this.settings = options.settings;
+
+  this.screen = blessed.screen({
+    smartCSR: true,
+    title: options.appName
+  });
+
+  this.logProvider = new LogProvider(this.screen);
+  this.metricsProvider = new MetricsProvider(this.screen);
+
+  this._createViews();
+  this._configureKeys();
+  this.screen.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodejs-dashboard.dashboard.prototype" id="apidoc.module.nodejs-dashboard.dashboard.prototype">module nodejs-dashboard.dashboard.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard.dashboard.prototype._configureKeys" id="apidoc.element.nodejs-dashboard.dashboard.prototype._configureKeys">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.dashboard.prototype.</span>_configureKeys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_configureKeys = function () {
+
+  this.screen.key([&#x22;left&#x22;, &#x22;right&#x22;], _.throttle(function (ch, key) {
+    var delta = key.name === &#x22;left&#x22; ? -1 : 1;
+    var target = (this.currentLayout + delta + this.layouts.length) % this.layouts.length;
+    this._showLayout(target);
+  }.bind(this), THROTTLE_TIMEOUT));
+
+  var helpNode = this.helpView.node;
+  this.screen.key([&#x22;?&#x22;, &#x22;h&#x22;], function () {
+    helpNode.toggle();
+    this.screen.render();
+  }.bind(this));
+
+  this.screen.key(&#x22;escape&#x22;, function () {
+    if (helpNode.visible) {
+      helpNode.hide();
+      this.screen.render();
+    } else {
+      this._showLayout(0);
+    }
+  }.bind(this));
+
+  this.screen.key([&#x22;q&#x22;, &#x22;C-c&#x22;], function () {
+    process.exit(0); // eslint-disable-line no-process-exit
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  title: options.appName
+});
+
+this.logProvider = new LogProvider(this.screen);
+this.metricsProvider = new MetricsProvider(this.screen);
+
+this._createViews();
+this.<span class="apidocCodeKeywordSpan">_configureKeys</span>();
+this.screen.render();
+};
+
+Dashboard.prototype._createViews = function () {
+this.layouts = generateLayouts(this.options.layoutsFile);
+this.views = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard.dashboard.prototype._createViews" id="apidoc.element.nodejs-dashboard.dashboard.prototype._createViews">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.dashboard.prototype.</span>_createViews
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createViews = function () {
+  this.layouts = generateLayouts(this.options.layoutsFile);
+  this.views = [];
+
+  // container prevents stream view scrolling from interfering with side views
+  this.container = blessed.box();
+  this.screen.append(this.container);
+
+  this.helpView = new HelpView({
+    parent: this.container
+  });
+
+  this._showLayout(0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  smartCSR: true,
+  title: options.appName
+});
+
+this.logProvider = new LogProvider(this.screen);
+this.metricsProvider = new MetricsProvider(this.screen);
+
+this.<span class="apidocCodeKeywordSpan">_createViews</span>();
+this._configureKeys();
+this.screen.render();
+};
+
+Dashboard.prototype._createViews = function () {
+this.layouts = generateLayouts(this.options.layoutsFile);
+this.views = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard.dashboard.prototype._showLayout" id="apidoc.element.nodejs-dashboard.dashboard.prototype._showLayout">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.dashboard.prototype.</span>_showLayout
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_showLayout = function (id) {
+  if (this.currentLayout === id) {
+    return;
+  }
+  _.each(this.views, function (view) {
+    view.destroy();
+  });
+
+  this.views = [];
+
+  _.each(this.layouts[id], function (layoutConfig) {
+    var View;
+
+    if (VIEW_MAP[layoutConfig.view.type]) {
+      View = VIEW_MAP[layoutConfig.view.type];
+    } else if (layoutConfig.view.module) {
+      // eslint-disable-next-line global-require
+      View = require(layoutConfig.view.module)(BaseView);
+    }
+
+    if (View) {
+      if (this.settings[layoutConfig.view.type]) {
+        layoutConfig = _.merge(layoutConfig, {
+          view: this.settings[layoutConfig.view.type]
+        });
+      }
+      var view = new View({
+        parent: this.container,
+        logProvider: this.logProvider,
+        metricsProvider: this.metricsProvider,
+        layoutConfig: layoutConfig
+      });
+
+      this.views.push(view);
+    }
+  }.bind(this));
+
+  this.currentLayout = id;
+  this.helpView.node.setFront();
+  this.screen.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.container = blessed.box();
+this.screen.append(this.container);
+
+this.helpView = new HelpView({
+  parent: this.container
+});
+
+this.<span class="apidocCodeKeywordSpan">_showLayout</span>(0);
+};
+
+Dashboard.prototype._configureKeys = function () {
+
+this.screen.key([&#x22;left&#x22;, &#x22;right&#x22;], _.throttle(function (ch, key) {
+  var delta = key.name === &#x22;left&#x22; ? -1 : 1;
+  var target = (this.currentLayout + delta + this.layouts.length) % this.layouts.length;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard.dashboard.prototype.onEvent" id="apidoc.element.nodejs-dashboard.dashboard.prototype.onEvent">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.dashboard.prototype.</span>onEvent
+        <span class="apidocSignatureSpan">(event)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onEvent = function (event) {
+  this.screen.emit(event.type, event.data);
+  // avoid double screen render for stream events (Element calls screen.render on scroll)
+  // TODO dashboard shouldn&#x27;t know which events are used by which widgets
+  if (event.type === &#x22;metrics&#x22;) {
+    this.screen.render();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nodejs-dashboard.utils" id="apidoc.module.nodejs-dashboard.utils">module nodejs-dashboard.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nodejs-dashboard.utils.getPercentUsed" id="apidoc.element.nodejs-dashboard.utils.getPercentUsed">
+        function <span class="apidocSignatureSpan">nodejs-dashboard.utils.</span>getPercentUsed
+        <span class="apidocSignatureSpan">(used, total)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPercentUsed = function (used, total) {
+  return Math.floor(used / total * MAX_PERCENT);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
