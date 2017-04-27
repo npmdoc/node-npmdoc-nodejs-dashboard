@@ -1,6 +1,6 @@
 # npmdoc-nodejs-dashboard
 
-#### api documentation for  [nodejs-dashboard (v0.4.1)](https://github.com/FormidableLabs/nodejs-dashboard#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-nodejs-dashboard.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nodejs-dashboard) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nodejs-dashboard.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nodejs-dashboard)
+#### basic api documentation for  [nodejs-dashboard (v0.4.1)](https://github.com/FormidableLabs/nodejs-dashboard#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-nodejs-dashboard.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nodejs-dashboard) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nodejs-dashboard.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nodejs-dashboard)
 
 #### Telemetry dashboard for node.js apps from the terminal!
 
